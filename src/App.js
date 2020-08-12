@@ -1,10 +1,13 @@
-import React from 'react';
-
+import React, {useState, useEffect} from 'react';
+import MainMenu from './containers/MainMenu'
 
 
 const App = () => {
+
     return(
-        <h1>Hello World</h1>
+        <>
+            <MainMenu />
+        </>
     )
 };
 
