@@ -1,0 +1,20 @@
+// configure how babel behaves (using json format)
+// in other words, what babel is capable of going with these files
+
+{
+    "presets": [
+        //telling babel to compile the code for it to work in target browsers
+        ["@babel/preset-env", {
+            "targets": {
+                "browsers": ["> 1%", "last 2 versions"]
+            }
+          }
+        ],
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        //declare that I need support of newest js syntax
+        // js syntax that is not yet official
+        "@babel/plugin-proposal-class-properties"
+    ]
+}
