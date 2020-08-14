@@ -1,0 +1,11 @@
+.container{
+    padding: 6px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-top: 10px solid rgb(73, 73, 73);
+    
+    justify-content: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}

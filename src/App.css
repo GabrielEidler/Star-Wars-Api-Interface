@@ -11,3 +11,16 @@
 .mainTitle{
   color: yellow;
 }
+
+.bottomContent{
+  display: flex;
+}
+
+.leftPanel{
+  max-width: 800px;
+}
+
+.rightPanel{
+
+}
+

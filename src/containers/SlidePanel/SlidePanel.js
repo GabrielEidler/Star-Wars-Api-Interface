@@ -15,6 +15,7 @@ const SlidePanel = (props) => {
     // parses each content type
     const contentParser = (unparsedData, contentType) => {
         let results = unparsedData.results;
+        console.log(results);
         if(results){
             if(contentType === 'films'){
                 const listItems = results.map(result =>
@@ -23,7 +24,10 @@ const SlidePanel = (props) => {
                     setItems(listItems);
             }else{
                 const listItems = results.map(result =>
-                    <MediumCard key={result.name} content={result} category={'other'}/>
+                    <MediumCard 
+                        key={result.name} 
+                        content={result} 
+                        category={'other'}/>
                     );
                     setItems(listItems);
             }
