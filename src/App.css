@@ -1,0 +1,14 @@
+* {
+  background-color: rgb(10, 11, 14);
+  color: rgb(213, 214, 216);
+  font-family: sans-serif;
+}
+
+.App {
+  text-align: center;
+  align-items: center;
+}
+
+.mainTitle{
+  color: yellow;
+}

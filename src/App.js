@@ -1,13 +1,19 @@
-import React, {useState, useEffect} from 'react';
-import MainMenu from './containers/MainMenu'
+import React from 'react';
 
+
+//custom imports
+import TopPanel from './containers/TopPanel/TopPanel'
+import SlidePanel from './containers/SlidePanel/SlidePanel'
+import classes from './App.css';
 
 const App = () => {
 
     return(
-        <>
-            <MainMenu />
-        </>
+        <div className={classes.App} >
+            <h1 className={classes.mainTitle}>STAR WARS API INTERFACE </h1>
+            <TopPanel />
+            <SlidePanel />
+        </div>
     )
 };
 

@@ -1,0 +1,27 @@
+
+
+.mediumCard{
+    max-width: inherit;
+    align-items: center;
+    margin: auto;
+    width: 16%;
+    height: 100%;
+}
+
+.border{
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5%;
+    height: 100%;
+}
+
+.mediumCard .title{
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(195, 194, 197);
+    text-transform: uppercase;
+}
+
+.people{
+    background: url('https://cdn.onebauer.media/one/empire-images/features/560ebc7b50e6c513721c309f/Ben%20Kenobi.jpg?quality=50&width=1800&ratio=16-9&resizeStyle=aspectfill&format=jpg');
+    background-size: 100%;
+}
