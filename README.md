@@ -3,7 +3,7 @@ A simple interface handling the swapi.co api!
 
 # Technologies
 
-- Webpacks for bundling javascript;
+- Webpack for bundling javascript;
 - Redux for state management;
 - React (Hooks);
 - API Endpoints;
