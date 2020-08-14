@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { fullViewSelect } from '../../actions/'
 
 //custom imports
 import api from '../../api/api'
@@ -8,14 +10,13 @@ import classes from './SlidePanel.css';
 
 const SlidePanel = (props) => {
     // getting newValue from REDUX store
-    const {newValue} = props;
-
+    const {newValue, fullView, fullViewSelect} = props;
     const [items, setItems] = useState(null);
 
     // parses each content type
     const contentParser = (unparsedData, contentType) => {
         let results = unparsedData.results;
-        console.log(results);
+        //console.log(results);
         if(results){
             if(contentType === 'films'){
                 const listItems = results.map(result =>
@@ -27,7 +28,9 @@ const SlidePanel = (props) => {
                     <MediumCard 
                         key={result.name} 
                         content={result} 
-                        category={'other'}/>
+                        category={'other'}
+                        buttonHandler={()=>fullViewSelect(result.name)}
+                    />
                     );
                     setItems(listItems);
             }
@@ -56,7 +59,12 @@ const SlidePanel = (props) => {
 
 // makes newValue usable as a prop
 const mapStateToProps = store => ({
-    newValue: store.clickState.newValue
+    newValue: store.clickState.newValue,
+    fullView: store.clickState.fullView
   });
 
-export default connect(mapStateToProps)(SlidePanel);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ fullViewSelect }, dispatch);
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SlidePanel);

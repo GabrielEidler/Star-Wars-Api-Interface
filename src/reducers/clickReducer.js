@@ -1,7 +1,8 @@
-import { CLICK_UPDATE_VALUE } from '../actions/actionTypes';
+import { CLICK_UPDATE_VALUE, FULL_VIEW_SELECT } from '../actions/actionTypes';
 
 const initialState = {
-  newValue: ''
+  newValue: '',
+  fullView: ''
 };
 
 export const clickReducer = (state = initialState, action) => {
@@ -10,6 +11,11 @@ export const clickReducer = (state = initialState, action) => {
       return {
         ...state,
         newValue: action.newValue
+      };
+    case FULL_VIEW_SELECT:
+      return {
+        ...state,
+        fullView: action.fullView
       };
     default:
       return state;

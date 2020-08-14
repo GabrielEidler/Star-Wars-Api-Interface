@@ -5,7 +5,7 @@ import { FaPlus } from 'react-icons/fa';
 //custom imports
 import classes from './mediumCard.css';
 
-const MediumCard = ({content, category}) => {
+const MediumCard = ({content, category, buttonHandler}) => {
     let styleClass;
     let contentCategory;
 
@@ -18,7 +18,7 @@ const MediumCard = ({content, category}) => {
 
 
     return(
-        <div className={classes.mediumCard} >
+        <div onClick={buttonHandler} className={classes.mediumCard} >
             <div className={classes.border} >
                     <p className={classes.title}>{contentCategory}</p>
                     <IconContext.Provider value={{ size: "100px"}}>
